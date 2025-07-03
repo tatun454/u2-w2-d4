@@ -81,25 +81,7 @@
         </button>
       </div>
     </section>
-   <!-- Contatore e Cancellatore -->
-<div class="container my-3 d-flex gap-2">
-  <button class="btn btn-warning btn-sm" onclick="contaViaggi()">Conta viaggi</button>
-  <button class="btn btn-danger btn-sm" onclick="rimuoviTutteLeCard()">Rimuovi tutte le card</button>
-</div>
-<!-- Ho scritto qua lo script non sapendo se il compito permetteva la possibilità si creare un file js -->
-<script>
-  function contaViaggi() {
-    const cards = document.querySelectorAll('#saldi .card, #welcome-summer .card ');
-    alert('Numero di viaggi presenti: ' + cards.length);
-  }
-</script>
-<script>
-  function rimuoviTutteLeCard() {
-    document.querySelectorAll('.card').forEach(card => card.remove());
-  }
-</script>
-
-    <!-- SALDI -->
+<!-- SALDI -->
     <section id="saldi" class="container my-4">
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h2>Saldi</h2>
