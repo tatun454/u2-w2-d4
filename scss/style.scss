@@ -1,0 +1,17 @@
+@import "_bootstrap-overrides";
+@import "../bootstrap/bootstrap";
+
+$theme-colors: map-merge(
+  (
+    "epicode-1": #5726c3,
+    "epicode-2": #8625a5,
+    "epicode-3": #cb2376,
+  ),
+  $theme-colors
+);
+
+.btn-outline-epicode-2 {
+  border: 2px solid #8625a5;
+  color: #8625a5;
+  background: transparent;
+}

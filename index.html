@@ -1,0 +1,424 @@
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenzia di Viaggi</title>
+  <link rel="stylesheet" href="/scss/style.css">
+  
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-1 sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center py-0" href="#">
+          <img
+            src="https://img.icons8.com/ios-filled/50/0099ff/beach.png"
+            alt="Logo"
+            width="28"
+            class="me-2"
+            style="margin-top: -2px"
+          />
+          <span class="fw-bold fs-6">Eveline-R</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-0">
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#saldi">Saldi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#welcome-summer">Welcome Summer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#last-minute">Last Minute</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#recensioni">Recensioni</a>
+            </li>
+          </ul>
+          <form class="d-flex ms-3">
+            <input
+              class="form-control form-control-sm me-2"
+              type="search"
+              placeholder="Cerca posti da sogno"
+              aria-label="Search"
+              style="width: 160px"
+            />
+            <button
+              class="btn btn-outline-info btn-sm"
+              type="submit"
+              style="width: 48px"
+            >
+              Cerca
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- INTRO -->
+    <section id="home" class="container my-4">
+      <div class="bg-light rounded p-4 shadow-sm">
+        <h1 class="display-4">
+           <span class="text-epicode-1">Eveline-R</span>
+  <small class="fs-5 text-muted">Feel the Freedom</small>
+        </h1>
+        <p class="fst-italic fs-5 mt-2 text-epicode-3">
+          Scopri le destinazioni più calde del momento!
+        </p>
+        <button class="btn btn-epicode-2 text-white fw-bold mt-2">
+          Prenota ora
+        </button>
+      </div>
+    </section>
+   <!-- Contatore e Cancellatore -->
+<div class="container my-3 d-flex gap-2">
+  <button class="btn btn-warning btn-sm" onclick="contaViaggi()">Conta viaggi</button>
+  <button class="btn btn-danger btn-sm" onclick="rimuoviTutteLeCard()">Rimuovi tutte le card</button>
+</div>
+<!-- Ho scritto qua lo script non sapendo se il compito permetteva la possibilità si creare un file js -->
+<script>
+  function contaViaggi() {
+    const cards = document.querySelectorAll('#saldi .card, #welcome-summer .card ');
+    alert('Numero di viaggi presenti: ' + cards.length);
+  }
+</script>
+<script>
+  function rimuoviTutteLeCard() {
+    document.querySelectorAll('.card').forEach(card => card.remove());
+  }
+</script>
+
+    <!-- SALDI -->
+    <section id="saldi" class="container my-4">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h2>Saldi</h2>
+        <button
+          class="btn btn-outline-epicode-2 btn-sm text-info"
+          data-bs-toggle="collapse"
+          data-bs-target="#saldiCards"
+        >
+          Nascondi sezione
+        </button>
+      </div>
+      <div class="collapse show" id="saldiCards">
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card border-info border-6 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                class="card-img-top"
+                alt="Destinazione 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text small">
+                  Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <button class="btn btn-info btn-sm text-white">Prenota</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card border-info border-6 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=400&q=80"
+                class="card-img-top"
+                alt="Destinazione 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text small">
+                  Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <button class="btn btn-info btn-sm text-white">Prenota</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-none d-md-block">
+            <div class="card border-info border-6 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80"
+                class="card-img-top"
+                alt="Destinazione 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text small">
+                  Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <button class="btn btn-info btn-sm text-white">Prenota</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-none d-lg-block">
+            <div class="card border-info border-6 h-100">
+              <img
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                class="card-img-top"
+                alt="Destinazione 4"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Titolo</h5>
+                <p class="card-text small">
+                  Lorem ipsum dolor sit amet, consectetur, adipisicing elit.
+                  Officia et possimus aliquid deserunt veritatis natus ullam
+                  perspiciatis temporibus minima repudiandae!
+                </p>
+                <button class="btn btn-info btn-sm text-white">Prenota</button>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    <!-- Welcome Summer -->
+<section id="welcome-summer" class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h2>Welcome Summer</h2>
+    <button class="btn btn-outline-epicode-2 btn-sm text-info" data-bs-toggle="collapse" data-bs-target="#welcomeSummerCards">
+      Nascondi sezione
+    </button>
+  </div>
+  <div class="collapse show" id="welcomeSummerCards">
+    <div class="row g-4">
+    
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+        <div class="card shadow-lg position-relative h-100">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Welcome Summer 1" />
+          <div class="card-body">
+            <h5 class="card-title">Titolo</h5>
+            <p class="card-text small">Lorem ipsum dolor sit amet, consectetur, adipisicing elit.</p>
+            <button class="btn btn-info btn-sm text-white">Prenota</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+        <div class="card shadow-lg position-relative h-100">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Welcome Summer 1" />
+          <div class="card-body">
+            <h5 class="card-title">Titolo</h5>
+            <p class="card-text small">Lorem ipsum dolor sit amet, consectetur, adipisicing elit.</p>
+            <button class="btn btn-info btn-sm text-white">Prenota</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+        <div class="card shadow-lg position-relative h-100">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Welcome Summer 1" />
+          <div class="card-body">
+            <h5 class="card-title">Titolo</h5>
+            <p class="card-text small">Lorem ipsum dolor sit amet, consectetur, adipisicing elit.</p>
+            <button class="btn btn-info btn-sm text-white">Prenota</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+        <div class="card shadow-lg position-relative h-100">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Welcome Summer 1" />
+          <div class="card-body">
+            <h5 class="card-title">Titolo</h5>
+            <p class="card-text small">Lorem ipsum dolor sit amet, consectetur, adipisicing elit.</p>
+            <button class="btn btn-info btn-sm text-white">Prenota</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+        <div class="card shadow-lg position-relative h-100">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Welcome Summer 1" />
+          <div class="card-body">
+            <h5 class="card-title">Titolo</h5>
+            <p class="card-text small">Lorem ipsum dolor sit amet, consectetur, adipisicing elit.</p>
+            <button class="btn btn-info btn-sm text-white">Prenota</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
+        <div class="card shadow-lg position-relative h-100">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">HOT</span>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Welcome Summer 1" />
+          <div class="card-body">
+            <h5 class="card-title">Titolo</h5>
+            <p class="card-text small">Lorem ipsum dolor sit amet, consectetur, adipisicing elit.</p>
+            <button class="btn btn-info btn-sm text-white">Prenota</button>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</section>
+
+<!-- Offerta del giorno -->
+ <section id="offerta-giorno" class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h2>Offerta del giorno</h2>
+    <button class="btn btn-outline-epicode-2 btn-sm text-info" data-bs-toggle="collapse" data-bs-target="#offertaGiornoContent">
+      Nascondi sezione
+    </button>
+  </div>
+  <div class="collapse show" id="offertaGiornoContent">
+    <div class="row align-items-center bg-white rounded shadow-sm">
+      <div class="col-12 col-md-8 p-0">
+        <img 
+          src="https://live.staticflickr.com/79/243121858_1980c8885f_b.jpg" 
+          class="img-fluid rounded-start border-10 border-info w-100 "
+          alt="Offerta del giorno"
+          style="object-fit:cover; ;"
+        >
+      </div>
+      <div class="col-12 col-md-4 p-3">
+        <h3 class="fs-4 mb-1">Villa italiana</h3>
+        <div class="text-muted mb-1" style="font-family:monospace; font-size:0.95em;">15.01.2026 - 31.01.2026</div>
+        <div class="lead mb-2" style="font-size:1.1em;">Ville a partire da 700 €, non fartela sfuggire!</div>
+        <span class="badge bg-dark">best offer</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptas, cumque eius saepe sed exercitationem facilis quasi, fugiat officia velit sunt sequi neque similique quas totam cupiditate, repudiandae quaerat qui?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus aperiam consequatur repellendus? Expedita modi quia esse autem, repudiandae illum illo, dolorum, unde officiis necessitatibus similique deleniti. Consequatur animi veritatis hic.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, quos reprehenderit mollitia consectetur error deserunt. Aspernatur sed ut sit temporibus rem qui, id, adipisci harum sapiente dolores molestias sequi. Ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magni nostrum adipisci tempora excepturi delectus, incidunt porro ipsam, vitae deleniti, minus saepe harum iure odit reiciendis voluptatum dolore consequatur modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, odio dolore quae voluptas minima, optio, vel accusamus sequi illo sed inventore corrupti maxime blanditiis? Magnam reprehenderit esse consequatur labore at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum eum ullam harum error, neque vitae pariatur laboriosam vero quod beatae. Dolores nemo corrupti voluptas dignissimos sint provident distinctio fugiat.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Last Minute -->
+<section id="last-minute" class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h2>Last Minute</h2>
+    <button class="btn btn-outline-epicode-2 btn-sm text-info" data-bs-toggle="collapse" data-bs-target="#lastMinuteCards">
+      Nascondi sezione
+    </button>
+  </div>
+  <div class="collapse show" id="lastMinuteCards">
+    <div class="row g-3">
+     
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow-sm" alt="Last Minute 1" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow-sm" alt="Last Minute 1" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow-sm" alt="Last Minute 1" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow-sm" alt="Last Minute 1" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow-sm" alt="Last Minute 1" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow-sm" alt="Last Minute 1" />
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Recensioni -->
+<section id="recensioni" class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h2 class="mb-0">Dicono di noi</h2>
+    <button class="btn btn-outline-epicode-2 btn-sm text-info" data-bs-toggle="collapse" data-bs-target="#recensioniContent">
+      Nascondi sezione
+    </button>
+  </div>
+  <div class="collapse show" id="recensioniContent">
+    <div class="row g-3">
+    <div class="col-12">
+      <div class="d-flex align-items-start bg-white rounded shadow-sm p-3">
+        <img src="https://randomuser.me/api/portraits/women/22.jpg" class="rounded-circle border border-info border-2 me-3" width="48" alt="User" />
+        <div>
+          <div class="fw-bold">Username</div>
+          <div class="small">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quam. Nobis autem fugit dolor aspernatur commodi asperiores enim, saepe cum quae, sapiente ipsum, magnam sequi officiis deleniti repellendus expedita blanditiis. ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="d-flex align-items-start bg-white rounded shadow-sm p-3">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle border border-info border-2 me-3" width="48" alt="User" />
+        <div>
+          <div class="fw-bold">Username</div>
+          <div class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="d-flex align-items-start bg-white rounded shadow-sm p-3">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle border border-info border-2 me-3" width="48" alt="User" />
+        <div>
+          <div class="fw-bold">Username</div>
+          <div class="small">Lorem ipsum dolor sit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa unde aperiam doloremque quas neque quidem voluptates modi, at odio corrupti eveniet et natus excepturi fugit dolor doloribus distinctio quam veniam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum soluta nesciunt deserunt beatae, porro, animi sequi voluptatem doloremque ad quod asperiores atque nam ipsa dolores quibusdam consequatur. Accusantium, sapiente ea amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="d-flex align-items-start bg-white rounded shadow-sm p-3">
+        <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-circle border border-info border-2 me-3" width="48" alt="User" />
+        <div>
+          <div class="fw-bold">Username</div>
+          <div class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white py-4 mt-5">
+  <div class="container">
+    <div class="mb-2 fs-10">© 2025 Kalina Travel LTD. All Rights Reserved.</div>
+    <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#contattiModal">Contattaci</button>
+  </div>
+</footer>
+
+<!--Contattaci -->
+<div class="modal fade" id="contattiModal" tabindex="-1" aria-labelledby="contattiModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contattiModalLabel">Contattaci</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailInput" placeholder="nome@email.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="messageInput" class="form-label">Messaggio</label>
+            <textarea class="form-control" id="messageInput" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-info text-white">Invia</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</html>
