@@ -12010,8 +12010,52 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.bg-epicode-1 {
+  background-color: #5726c3 !important;
+}
+
+.text-epicode-1 {
+  color: #5726c3 !important;
+}
+
+.bg-epicode-2 {
+  background-color: #8625a5 !important;
+}
+
+.text-epicode-2 {
+  color: #8625a5 !important;
+}
+
+.bg-epicode-3 {
+  background-color: #cb2376 !important;
+}
+
+.text-epicode-3 {
+  color: #cb2376 !important;
+}
+
+.btn-epicode-2 {
+  background-color: #8625a5;
+  color: #fff;
+  border-radius: 10rem;
+  border: none;
+}
+.btn-epicode-2:hover, .btn-epicode-2:focus {
+  background-color: #6e1e88;
+  color: #fff;
+}
+
 .btn-outline-epicode-2 {
   border: 2px solid #8625a5;
   color: #8625a5;
+  border-radius: 10rem;
   background: transparent;
+}
+.btn-outline-epicode-2:hover, .btn-outline-epicode-2:focus {
+  background-color: #8625a5;
+  color: #fff;
+}
+
+.card-body {
+  padding-bottom: 1.5rem;
 }/*# sourceMappingURL=style.css.map */

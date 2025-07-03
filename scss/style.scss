@@ -1,17 +1,39 @@
 @import "_bootstrap-overrides";
 @import "../bootstrap/bootstrap";
 
-$theme-colors: map-merge(
-  (
-    "epicode-1": #5726c3,
-    "epicode-2": #8625a5,
-    "epicode-3": #cb2376,
-  ),
-  $theme-colors
-);
+@each $name,
+  $color in ("epicode-1": #5726c3, "epicode-2": #8625a5, "epicode-3": #cb2376)
+{
+  .bg-#{$name} {
+    background-color: #{$color} !important;
+  }
+  .text-#{$name} {
+    color: #{$color} !important;
+  }
+}
 
+.btn-epicode-2 {
+  background-color: #8625a5;
+  color: #fff;
+  border-radius: 10rem;
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: darken(#8625a5, 7%);
+    color: #fff;
+  }
+}
 .btn-outline-epicode-2 {
   border: 2px solid #8625a5;
   color: #8625a5;
+  border-radius: 10rem;
   background: transparent;
+  &:hover,
+  &:focus {
+    background-color: #8625a5;
+    color: #fff;
+  }
+}
+.card-body {
+  padding-bottom: 1.5rem;
 }
